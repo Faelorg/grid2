@@ -95,12 +95,13 @@ header {
 
 .main {
 	background-color: rgba(216, 216, 216, 0.837);
-	padding-top: 50px;
+	display: flex;
 }
 
 .main__grid {
 	max-width: 65vw;
 	margin: 0 auto;
+	margin-top: 50px;
 	display: grid;
 	gap: 10px;
 	grid-template-columns: 25% 25% 25% 25%;
@@ -112,11 +113,12 @@ header {
 	display: grid;
 	align-content: start;
 	transition: 0.5s;
-	cursor: grab;
+	cursor: pointer;
 }
 
 .post:hover{
 	transform: scale(110%);
+	z-index: 2;
 }
 
 .post p {
@@ -282,3 +284,27 @@ footer {
 		grid-column-start: 3;
 	}
 }
+
+/* nav */
+
+nav{
+	background-color: #fff;
+	visibility: hidden;
+	transform: translateX(-100%);
+	pointer-events: none;
+	transition: .3s ease all;
+}
+
+.nav__grid{
+	display: grid;
+}
+
+.nav.opened {
+visibility: visible;
+pointer-events: all;
+transform: translateX(0);
+}
+
+
+
+/* nav */
