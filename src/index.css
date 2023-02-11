@@ -111,6 +111,12 @@ header {
 	/* margin-left: 15px; */
 	display: grid;
 	align-content: start;
+	transition: 0.5s;
+	cursor: grab;
+}
+
+.post:hover{
+	transform: scale(110%);
 }
 
 .post p {
